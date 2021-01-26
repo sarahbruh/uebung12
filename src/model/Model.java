@@ -28,17 +28,72 @@ public class Model{
     }
 
     public void changeColorViaAbsoluteValue(ColorCode cc, String value){
-
-
+        int intValue = Integer.parseInt(value);
+        switch (cc) {
+            case RED -> {
+                red.reset();
+                red.update(intValue);
+            }
+            case BLUE -> {
+                blue.reset();
+                blue.update(intValue);
+            }
+            case GREEN -> {
+                green.reset();
+                green.update(intValue);
+            }
+        }
     }
     public void changeColorViaAbsoluteValue(ColorCode cc, int value){
-
+        switch (cc) {
+            case RED -> {
+                red.reset();
+                red.update(value);
+            }
+            case BLUE -> {
+                blue.reset();
+                blue.update(value);
+            }
+            case GREEN -> {
+                green.reset();
+                green.update(value);
+            }
+        }
     }
     public void changeColorViaRelativeValue(ColorCode cc, String value){
 
+        int intValue = Integer.parseInt(value);
+        switch(cc){
+            case RED -> {
+                red.reset();
+                red.update(intValue);
+            }
+            case BLUE -> {
+                blue.reset();
+                blue.update(intValue);
+            }
+            case GREEN -> {
+                green.reset();
+                green.update(intValue);
+            }
+        }
     }
-    public void changeColorViaRelativeValue(ColorCode cc, int value){
+    public void changeColorViaRelativeValue(ColorCode cc, int value) {
 
+        switch (cc) {
+            case RED -> {
+                red.reset();
+                red.update(value);
+            }
+            case BLUE -> {
+                blue.reset();
+                blue.update(value);
+            }
+            case GREEN -> {
+                green.reset();
+                green.update(value);
+            }
+        }
     }
 
     public String getHex(){
@@ -63,27 +118,6 @@ public class Model{
         hex = hex + value_b;
 
         return hex;
-    }
-
-    public String intervalChange(String op, String id){
-
-        if (op.contains("-")){
-            if (id.contains("red"))
-                red.dec(10);
-            else if (id.contains("green"))
-                green.dec(10);
-            else
-                blue.dec(10);
-        }else{
-            if (id.contains("red"))
-                red.inc(10);
-            else if (id.contains("green"))
-                green.inc(10);
-            else
-                blue.inc(10);
-        }
-
-        return getHex();
     }
 
     public static void main(String[] args) {

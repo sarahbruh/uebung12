@@ -9,8 +9,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("controllerview/sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setTitle("Color Calculator");
+        primaryStage.setScene(new Scene(root, 500, 400));
         primaryStage.show();
     }
 

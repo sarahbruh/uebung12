@@ -6,11 +6,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import model.ColorCode;
 import model.Model;
-import model.ModularCounter;
 
 public class Controller {
 
-    private Model model;
+    private Model m = new Model();
 
     @FXML
     TextField txt_red = new TextField();
@@ -25,44 +24,112 @@ public class Controller {
 
     @FXML
     public void plusRED(){
-    model.changeColorViaRelativeValue(ColorCode.RED, 10);
-    txt_red.setText(Integer.toString(model.getRed()));
-    hex();
-    }
+        try{
+            m.changeColorViaRelativeValue(ColorCode.RED, 10);
+            txt_red.setText(Integer.toString(m.getRed()));
+            hex();
+        }
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }
 
+    }
     @FXML
     public void minusRED(){
-        model.changeColorViaRelativeValue(ColorCode.RED,-10);
-        txt_blue.setText(Integer.toString(model.getRed()));
-        hex();
+        //try{
+            m.changeColorViaRelativeValue(ColorCode.RED,-10);
+            txt_red.setText(Integer.toString(m.getRed()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }*/
+
     }
     @FXML
     public void plusGREEN(){
-        model.changeColorViaRelativeValue(ColorCode.GREEN, 10);
-        txt_red.setText(Integer.toString(model.getGreen()));
-        hex();
+        //try{
+            m.changeColorViaRelativeValue(ColorCode.GREEN, 10);
+            txt_green.setText(Integer.toString(m.getGreen()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }*/
+
     }
     @FXML
     public void minusGREEN(){
-        model.changeColorViaRelativeValue(ColorCode.GREEN,-10);
-        txt_blue.setText(Integer.toString(model.getGreen()));
-        hex();
+        //try{
+            m.changeColorViaRelativeValue(ColorCode.GREEN,-10);
+            txt_green.setText(Integer.toString(m.getGreen()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }*/
+
     }
     @FXML
     public void plusBLUE(){
-        model.changeColorViaRelativeValue(ColorCode.BLUE, 10);
-        txt_red.setText(Integer.toString(model.getBlue()));
-        hex();
+        //try{
+            m.changeColorViaRelativeValue(ColorCode.BLUE, 10);
+            txt_blue.setText(Integer.toString(m.getBlue()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }*/
+
     }
     @FXML
     public void minusBLUE(){
-        model.changeColorViaRelativeValue(ColorCode.BLUE,-10);
-        txt_blue.setText(Integer.toString(model.getBlue()));
-        hex();
-    }
+        //try{
+            m.changeColorViaRelativeValue(ColorCode.BLUE,-10);
+            txt_blue.setText(Integer.toString(m.getBlue()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Error! Try again!");
+        }*/
 
+    }
+    @FXML
+    public void absolutRED(){
+        //try{
+            m.changeColorViaAbsoluteValue(ColorCode.RED, txt_red.getText());
+            txt_red.setText(Integer.toString(m.getRed()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Es muss eine Zahl eingegeben werden!");
+        }*/
+    }
+    @FXML
+    public void absolutGREEN(){
+        //try{
+            m.changeColorViaAbsoluteValue(ColorCode.GREEN, txt_green.getText());
+            txt_green.setText(Integer.toString(m.getGreen()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Es muss eine Zahl eingegeben werden!");
+        }*/
+
+    }
+    @FXML
+    public void absolutBLUE(){
+        //try{
+            m.changeColorViaAbsoluteValue(ColorCode.BLUE, txt_blue.getText());
+            txt_blue.setText(Integer.toString(m.getBlue()));
+            hex();
+        /*}
+        catch (Exception ex){
+            System.err.println("Es muss eine Zahl eingegeben werden!");
+        }*/
+    }
     private void hex(){
-        txt_hex.setText(model.getHex());
-        colorview.setStyle("-fx-background-color:"+model.getHex()+";");
+        txt_hex.setText(m.getHex());
+        colorview.setStyle("-fx-background-color:"+m.getHex()+";");
     }
 }

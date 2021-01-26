@@ -23,15 +23,15 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txt_red" layoutX="22.0" layoutY="69.0" prefHeight="55.0" prefWidth="149.0" promptText="0-255" />
-      <TextField fx:id="txt_blue" layoutX="22.0" layoutY="180.0" prefHeight="55.0" prefWidth="149.0" promptText="0-255" />
-      <TextField fx:id="txt_green" layoutX="21.0" layoutY="290.0" prefHeight="55.0" prefWidth="150.0" promptText="0-255" />
-      <Button layoutX="172.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#minusRED" prefHeight="55.0" prefWidth="150.0" text="-10" />
-      <Button layoutX="172.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#plusRED" prefHeight="55.0" prefWidth="150.0" text="+10" />
-      <Button layoutX="172.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#minusBLUE" prefHeight="55.0" prefWidth="150.0" text="-10" />
-      <Button layoutX="172.0" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#plusBLUE" prefHeight="55.0" prefWidth="150.0" text="+10" />
-      <Button layoutX="172.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#minusGREEN" prefHeight="55.0" prefWidth="150.0" text="-10" />
-      <Button layoutX="172.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#plusGREEN" prefHeight="55.0" prefWidth="150.0" text="+10" />
+      <TextField fx:id="txt_red" layoutX="22.0" layoutY="69.0" onAction="#absolutRED" prefHeight="55.0" prefWidth="149.0" promptText="0-255" />
+      <TextField fx:id="txt_blue" layoutX="22.0" layoutY="180.0" onAction="#absolutBLUE" prefHeight="55.0" prefWidth="149.0" promptText="0-255" />
+      <TextField fx:id="txt_green" layoutX="21.0" layoutY="290.0" onAction="#absolutGREEN" prefHeight="55.0" prefWidth="150.0" promptText="0-255" />
+      <Button layoutX="172.0" layoutY="14.0" mnemonicParsing="false" onAction="#minusRED" prefHeight="55.0" prefWidth="150.0" text="-10" />
+      <Button layoutX="172.0" layoutY="69.0" mnemonicParsing="false" onAction="#plusRED" prefHeight="55.0" prefWidth="150.0" text="+10" />
+      <Button layoutX="172.0" layoutY="125.0" mnemonicParsing="false" onAction="#minusBLUE" prefHeight="55.0" prefWidth="150.0" text="-10" />
+      <Button layoutX="172.0" layoutY="180.0" mnemonicParsing="false" onAction="#plusBLUE" prefHeight="55.0" prefWidth="150.0" text="+10" />
+      <Button layoutX="172.0" layoutY="235.0" mnemonicParsing="false" onAction="#minusGREEN" prefHeight="55.0" prefWidth="150.0" text="-10" />
+      <Button layoutX="172.0" layoutY="290.0" mnemonicParsing="false" onAction="#plusGREEN" prefHeight="55.0" prefWidth="150.0" text="+10" />
       <Button fx:id="colorview" layoutX="338.0" layoutY="14.0" mnemonicParsing="false" prefHeight="134.0" prefWidth="141.0" />
       <Text fx:id="txt_hex" layoutX="338.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hex:" />
    </children>
