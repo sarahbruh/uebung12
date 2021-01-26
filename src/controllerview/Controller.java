@@ -7,6 +7,12 @@ import javafx.scene.text.Text;
 import model.ColorCode;
 import model.Model;
 
+/**
+ * uebung 12
+ * @author Brunmayr Sarah
+ * @version 12.0.1, 26.01.2021
+ */
+
 public class Controller {
 
     private Model m = new Model();
@@ -36,97 +42,97 @@ public class Controller {
     }
     @FXML
     public void minusRED(){
-        //try{
+        try{
             m.changeColorViaRelativeValue(ColorCode.RED,-10);
             txt_red.setText(Integer.toString(m.getRed()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Error! Try again!");
-        }*/
+        }
 
     }
     @FXML
     public void plusGREEN(){
-        //try{
+        try{
             m.changeColorViaRelativeValue(ColorCode.GREEN, 10);
             txt_green.setText(Integer.toString(m.getGreen()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Error! Try again!");
-        }*/
+        }
 
     }
     @FXML
     public void minusGREEN(){
-        //try{
+        try{
             m.changeColorViaRelativeValue(ColorCode.GREEN,-10);
             txt_green.setText(Integer.toString(m.getGreen()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Error! Try again!");
-        }*/
+        }
 
     }
     @FXML
     public void plusBLUE(){
-        //try{
+        try{
             m.changeColorViaRelativeValue(ColorCode.BLUE, 10);
             txt_blue.setText(Integer.toString(m.getBlue()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Error! Try again!");
-        }*/
+        }
 
     }
     @FXML
     public void minusBLUE(){
-        //try{
+        try{
             m.changeColorViaRelativeValue(ColorCode.BLUE,-10);
             txt_blue.setText(Integer.toString(m.getBlue()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Error! Try again!");
-        }*/
+        }
 
     }
     @FXML
     public void absolutRED(){
-        //try{
+        try{
             m.changeColorViaAbsoluteValue(ColorCode.RED, txt_red.getText());
             txt_red.setText(Integer.toString(m.getRed()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Es muss eine Zahl eingegeben werden!");
-        }*/
+        }
     }
     @FXML
     public void absolutGREEN(){
-        //try{
+        try{
             m.changeColorViaAbsoluteValue(ColorCode.GREEN, txt_green.getText());
             txt_green.setText(Integer.toString(m.getGreen()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Es muss eine Zahl eingegeben werden!");
-        }*/
+        }
 
     }
     @FXML
     public void absolutBLUE(){
-        //try{
+        try{
             m.changeColorViaAbsoluteValue(ColorCode.BLUE, txt_blue.getText());
             txt_blue.setText(Integer.toString(m.getBlue()));
             hex();
-        /*}
+        }
         catch (Exception ex){
             System.err.println("Es muss eine Zahl eingegeben werden!");
-        }*/
+        }
     }
     private void hex(){
         txt_hex.setText(m.getHex());

@@ -4,6 +4,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * uebung 12
+ * @author Brunmayr Sarah
+ * @version 12.0.1, 26.01.2021
+ */
+
 public class Main extends Application {
 
     @Override

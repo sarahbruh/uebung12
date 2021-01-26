@@ -1,6 +1,12 @@
 package model;
 
 /**
+ * uebung 12
+ * @author Brunmayr Sarah
+ * @version 12.0.1, 26.01.2021
+ */
+
+/**
  * Objects constructed from the ModularCounter class represent integral
  *   (non-negative) values under a modulus: they always lie in the range
  *   <code>[0,modulus-1]</code>.

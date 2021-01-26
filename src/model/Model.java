@@ -2,12 +2,17 @@ package model;
 
 import java.util.Scanner;
 
+/**
+ * uebung 12
+ * @author Brunmayr Sarah
+ * @version 12.0.1, 26.01.2021
+ */
+
 public class Model{
 
     private ModularCounter red;
     private ModularCounter green;
     private ModularCounter blue;
-    private String hex;
 
     public Model() {
         red = new ModularCounter(256);
@@ -82,15 +87,12 @@ public class Model{
 
         switch (cc) {
             case RED -> {
-                red.reset();
                 red.update(value);
             }
             case BLUE -> {
-                blue.reset();
                 blue.update(value);
             }
             case GREEN -> {
-                green.reset();
                 green.update(value);
             }
         }
@@ -99,22 +101,22 @@ public class Model{
     public String getHex(){
         String hex = "#";
 
-        String value_r=Integer.toHexString(red.getValue());
-        String value_g=Integer.toHexString(green.getValue());
-        String value_b=Integer.toHexString(blue.getValue());
+        String redv = Integer.toHexString(red.getValue());
+        String greenv = Integer.toHexString(green.getValue());
+        String value_b = Integer.toHexString(blue.getValue());
 
-        if (value_r.length()==1){
-            value_r="0"+value_r;
+        if (redv.length()==1){
+            redv = "0" + redv;
         }
-        if (value_g.length()==1){
-            value_g="0"+value_g;
+        if (greenv.length()==1){
+            greenv = "0" + greenv;
         }
         if (value_b.length()==1){
-            value_b="0"+value_b;
+            value_b = "0" + value_b;
         }
 
-        hex = hex + value_r;
-        hex = hex + value_g;
+        hex = hex + redv;
+        hex = hex + greenv;
         hex = hex + value_b;
 
         return hex;
@@ -122,12 +124,10 @@ public class Model{
 
     public static void main(String[] args) {
         Model model = new Model();
-        ColorCode colorCode;
-        String eingabe;
-        boolean input;
-        colorCode = ColorCode.BLUE;
+        boolean input = true;
+        ColorCode colorCode = ColorCode.BLUE;
 
-        while (true)
+        while (input)
         {
             Scanner sc = new Scanner(System.in);
             System.out.println("1: Farbe via Absolutwert ändern\n" +
@@ -135,7 +135,7 @@ public class Model{
                     "3: Alles anzeigen\n" +
                     "4: Verlassen \n");
             System.out.println("Bitte wählen: ");
-            eingabe = sc.next();
+            String eingabe = sc.next();
 
             switch (eingabe) {
                 case "1" -> {
